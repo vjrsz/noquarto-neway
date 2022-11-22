@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neway - Perfil</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="app">
+
+
+        <div id="sidebar" class='active'>
+            <div class="sidebar-wrapper active">
+                <div class="sidebar-header">
+                    <img src="img/logo.png" alt="" srcset="">
+                </div>
+                <div class="sidebar-menu">
+                    <ul class="menu">
+
+                        <li class='sidebar-title'><a href="home.html"><img src="img/icon01.svg"></a></li>
+                        <li class='sidebar-title'><a href="perfil.html"><img src="img/icon03.svg"></a></li>
+                        <li class='sidebar-title'><a href="perfil.html"><img src="img/perfil.png"></a></li>
+
+                    </ul>
+                </div>
+                <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+            </div>
+        </div>
+
+
+        <div id="main">
+            <nav class="navbar navbar-header navbar-expand navbar-light">
+                <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+                <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-center navbar-light ms-auto">
+                        <li class="dropdown nav-icon">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="nav-link  dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="d-lg-inline-block bell">
+                                    <i data-feather="bell"></i>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-large">
+                                <h6 class='py-2 px-4'>Notificações</h6>
+                                <ul class="list-group rounded-none">
+                                    <li class="list-group-item border-0 align-items-start">
+                                        <div class="avatar bg-success me-3">
+                                            <span class="avatar-content"><i data-feather="shopping-cart"></i></span>
+                                        </div>
+                                        <div>
+                                            <h6 class='text-bold'>Relatório </h6>
+                                            <p class='text-xs'>
+                                                Relatório disponível para dowloand - 15/05/2021
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropdown user-style">
+                            <a href="#" data-bs-toggle="dropdown"
+                                class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="d-md-block d-lg-inline-block">olá, Felipe!</div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="#"><i data-feather="log-out"></i> Sair</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="main-content container-fluid">
+                <div class="page-title">
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <h3>Alterar Informações</h3>
+                            <p>Este é o seu painel pessoal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-12">
+                    <div class="card">
+                          <div class="card-content">                      
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <img src="img/perfil-edit.svg"><br>
+                                        <a class="edit-perfil" href=""><img src="img/edit.png"></a>
+                                        <p class="edit-name"><b>Vanessa Lima</b></p>
+                                    </div>
+                                </div>
+
+                                <form class="form form-vertical">
+                                    <div class="row">
+                                        <div class="col-lg-12"><input type="" placeholder="Nome:" name=""></div>
+                                        <div class="col-lg-6"><input type="" placeholder="Senha:" name=""></div>
+                                        <div class="col-lg-6"><input type="" placeholder="Confirmar senha:" name=""></div>
+                                        <div class="col-lg-12"><input type="" placeholder="E-mail:" name=""></div>
+                                    </div>
+                                    <button>Salvar Alterações</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/feather-icons/feather.min.js"></script>
+    <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
