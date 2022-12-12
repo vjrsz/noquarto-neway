@@ -1,0 +1,302 @@
+.header{
+	background: #023F88;
+	padding: 25px 0;
+}
+
+body{
+	background: #F6F6F6;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+footer {
+    margin-top: auto;
+}
+
+p, label{
+	font-family: 'Archivo', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 175%;
+	color: #7B7B7B;
+}
+
+h2{
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 35px;
+	/* identical to box height */
+
+	text-transform: uppercase;
+	color: #013D85;
+}
+
+h3{
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	color: #FF7506;
+}
+
+.mauto{
+	margin: auto;
+}
+
+
+
+.header button{
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+	color: #FFFFFF;
+	background: linear-gradient(90.71deg, #FF9400 0.34%, #FF6822 99.38%);
+	border-radius: 50px;
+	width: 210px;
+	height: 50px;
+	border: none;
+	float: right;
+}
+
+.header i{
+	margin-right: 10px;
+}
+
+.header a{
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 17px;
+	color: #FFFFFF;
+	text-decoration: none;
+	float: right;
+	padding-right: 35px;
+}
+
+.information{
+	margin-top: 25px;
+	margin-bottom: 50px;
+	background: #F6F6F6;
+}
+
+.information p{
+	font-size: 14px;
+}
+
+.step button{
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+	color: #FFFFFF;
+	background: linear-gradient(90.71deg, #013D85 0.34%, #0062D8 99.38%);
+	border-radius: 50px;
+	width: 210px;
+	height: 50px;
+	border: none;
+}
+
+.step img{
+	margin-bottom: 35px;
+}
+
+.step button i{
+	padding-left: 10px;
+}
+
+.step form{
+	padding-bottom: 25px;
+}
+
+.finish input{
+	width: 100%;
+	height: 50px;
+	background: #EFEFEF;
+	border-radius: 100px;
+	border: none;
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 175%;
+	color: #7B7B7B;
+	margin-bottom: 15px;
+	padding-left: 15px;
+
+}
+
+.finish button{
+	width: 100%;
+}
+
+.step_img img{
+	float: right;
+}
+
+
+
+.tutorial{
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 17px;
+	color: #7B7B7B;
+	text-decoration: none;
+	padding-right: 35px;
+}
+
+.tutorial i{
+	color: #FF7506;
+	padding-right: 10px;
+}
+
+.check input{
+	margin-bottom: 0;
+}
+
+.check h3{
+	margin-bottom: 25px;
+}
+
+.check li{
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 200%;
+	text-decoration: none;
+	color: #7B7B7B;
+	list-style: none;
+}
+
+.check li i{
+	color: #FF7506;
+	padding-right: 10px;
+}
+
+.check p{
+	font-weight: 500;
+	color: #000000;
+}
+
+.check{
+	margin-bottom: 50px;
+}
+
+.check_img{
+	text-align: center;
+	padding: 250px 25px;
+	background: url("../../img/back.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 25px;
+}
+
+.check_img h3{
+	font-size: 32px;
+	line-height: 35px;
+	color: #FFFFFF;
+}
+
+.check_img p{
+	color: #fff;
+}
+
+
+footer{
+	background: #fff;
+	padding: 20px 0 5px;
+}
+
+.rigth a{
+	float: right;
+	padding: 0 15px;
+}
+
+.spc{
+	padding-right: 50px;
+}
+
+
+
+
+
+/* RESPONSIVO */
+@media screen and (max-width: 980px) {
+  .header, .information, footer{
+  	text-align: center;
+  }
+
+  .information{
+  	margin-bottom: 25px;
+  }
+
+  h2{
+  	font-size: 22px;
+  }
+
+  .header a{
+  	display: none;
+  }
+
+  .header button{
+  	float: inherit;
+  	margin-top: 25px;
+  }
+
+  .step_img img{
+  	width: 100%;
+  }
+
+  .step{
+  	padding: 25px;
+  }
+
+  .step img{
+  	width: 100%;
+  }
+
+  .step_img{
+  	margin-top: 25px;
+  }
+
+  .rigth a{
+  	float: inherit;
+  }
+
+  .rigth{
+  	margin-bottom: 15px;
+  }
+
+  .spc {
+	    padding-right: 0;
+	}
+
+	.check_img {
+	    text-align: center;
+	    padding: 25px;
+	    margin-top: 25px;
+	}
+
+	.check_img img{
+		width: auto;
+	}
+}
