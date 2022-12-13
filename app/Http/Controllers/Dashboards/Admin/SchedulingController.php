@@ -23,6 +23,11 @@ class SchedulingController extends Controller
         \Illuminate\Support\Facades\Mail::send(new \App\Mail\newScheduling($user, $scheduling));
     
         return redirect()->back()->withSuccess('Aprovado com sucesso!');
-
+    }
+    public function blocked_hours(Request $request)
+    {
+        dd($request);
+    
+        return redirect()->back()->withSuccess('Aprovado com sucesso!');
     }
 }

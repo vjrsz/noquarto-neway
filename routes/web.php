@@ -3,6 +3,7 @@
 use App\Http\Controllers\Dashboards\Admin\AuthController as AdminController;
 use App\Http\Controllers\Web\SchedulingController as SchedulingWebController;
 use App\Http\Controllers\Dashboards\Admin\SchedulingController as SchedulingAdminController;
+use App\Http\Controllers\Dashboards\Admin\BlockedDateController as BlockedDateAdminController;
 use App\Http\Controllers\PdfviewController;
 use App\Http\Controllers\Web\WebController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,7 @@ Route::group(['as' => 'web.'], function () {
         Route::controller(SchedulingWebController::class)->group(function () {
             Route::get('/agendamento-finalizado/{scheduling}', 'finish')->name('finish');
             Route::post('/fazer-agendamento', 'store')->name('store');
+            Route::post('/validar-data', 'date_valid')->name('date_valid');
         });
     });
 });
@@ -49,7 +51,15 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.'], function () {
 
             Route::group(['prefix' => 'agenda', 'as' => 'scheduling.'], function () {
                 Route::controller(SchedulingAdminController::class)->group(function () {
-                    Route::put('/novo-agendamento/{scheduling}', 'edit')->name('edit');
+                    Route::put('/editar-agendamento/{scheduling}', 'edit')->name('edit');
+                });
+            });
+            Route::group(['prefix' => 'horarios', 'as' => 'blockeddate.'], function () {
+                Route::controller(BlockedDateAdminController::class)->group(function () {
+                    Route::get('/', 'index')->name('index');
+                    Route::post('/salvar', 'store')->name('store');
+                    Route::put('/editar/{blockeddate}', 'edit')->name('edit');
+                    Route::delete('/deletar/{blockeddate}', 'destroy')->name('destroy');
                 });
             });
             Route::group(['prefix' => 'pdf', 'as' => 'pdf.'], function () {

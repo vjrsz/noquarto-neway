@@ -24,31 +24,54 @@
     const raiz = 'img/steps/';
     let source = '';
     let values = [
-        ['s', 'ls', 'ff'],
-        [],
-        [],
-        ['borda-bege', 'borda-cinza', 'borda-marfim'],
-        ['plaster-ac', 'plaster-ae', 'plaster-c'],
-        ['deck-bege', 'deck-cinza', 'deck-marfim', ],
+        ['sq', 'ls', 'ff'],
+        ['si', 'no'],
+        ['bb', 'bc', 'bm'],
+        ['aa', 'ac', 'ar'],
+        ['pac', 'pae', 'pc'],
+        ['db', 'dc', 'dm', ],
     ];
 
     for (var i = 0; i < step_final; i++) {
         $('#step0' + i).hide()
     }
 
-    function getImg(data) {
+    function getImg() {
         arr = Object.values(data)
+        
+        forma = arr[0] - 1 >= 0 ? values[0][arr[0] - 1] : '';
+        spa = arr[1] - 1 >= 0 ? '-' + values[1][arr[1] - 1] : '';
+        border =  arr[2] - 1 >= 0 ? '-' + values[2][arr[2] - 1] : '';
+        azulejo = arr[3] - 1 >= 0 ? '-' + values[3][arr[3] - 1] : '';
+        plaster = arr[4] - 1 >= 0 ? '-' + values[4][arr[4] - 1] : '';
+        deck = arr[5] - 1 >= 0 ? '-' + values[5][arr[5] - 1] : '';
 
-        forma = values[0][arr[0] - 1] ? values[0][arr[0] - 1] : '';
+        /*forma = values[0][arr[0] - 1] ? values[0][arr[0] - 1] : '';
         plaster = values[4][arr[4] - 1] ? '-' + values[4][arr[4] - 1] : '';
         deck = values[5][arr[5] - 1] ? '-' + values[5][arr[5] - 1] : '';
-        border = values[3][arr[3] - 1] ? '-' + values[3][arr[3] - 1] : '';
+        border = values[3][arr[3] - 1] ? '-' + values[3][arr[3] - 1] : '';*/
 
-        if ((forma || plaster || deck || border) && step_actual != 2) source = forma + plaster + deck + border + '.jpg'
+        if ( forma ) source = forma + spa + border + azulejo + plaster + deck + '.jpg'
         else if (step_actual == 1) source = 'index.jpg'
 
+        console.log(source)
     }
+    function backStep(){
+        if (step_actual > 1) { 
+            $('#step0' + step_actual).hide();
 
+            step_actual -= 1
+            step_id = "step0" + step_actual
+            value = 0
+
+            check($('#step0' + (step_actual) + ' [checked]'))
+
+            $('#step0' + step_actual).show();
+
+        }else{
+            $('[next-step]').attr("disabled", true);
+        }
+    }
     function nextStep() {
         $('#step0' + step_actual).hide();
 
@@ -73,15 +96,14 @@
 
         value = $(el).val();
         step_id = "step0" + step_actual
+        data[step_id] = value
 
-        data['step0' + step_actual] = value
+        console.log(data)
 
-        if (step_actual != 3) {
-            getImg(data)
+        if (step_actual) {
+            getImg()
 
-            if (step_actual == 2) folder = 1
-            else folder = step_actual
-            $("#" + step_id + "_img").attr("src", raiz + ("0" + folder + "/") + source);
+            $("#" + step_id + "_img").attr("src", raiz + ("0" + step_actual + "/") + source);
         } else {
             $("#" + step_id + "_img").attr("src", raiz + "03/" + value + '.png');
         }
@@ -91,25 +113,11 @@
 
 
     $('[next-step]').click(nextStep);
-    $('[before-step]').click(function(){
-        if (step_actual > 1) { 
-            $('#step0' + step_actual).hide();
-
-            step_actual -= 1
-            step_id = "step0" + step_actual
-            value = 0
-
-            check($('#step0' + (step_actual) + ' [checked]'))
-
-            $('#step0' + step_actual).show();
-
-        }else{
-            $('[next-step]').attr("disabled", true);
-        }
-    });
+    $('[before-step]').click(backStep);
     $('input[type="checkbox"]').on('change', (e) => {
         check($(e.currentTarget))
         $('[next-step]').attr("disabled", false);
     });
+
     nextStep();
 </script>

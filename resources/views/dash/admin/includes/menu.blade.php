@@ -7,6 +7,7 @@
             <ul class="menu">
 
                 <li class='sidebar-title'><a href="{{route('dashboard.admin.index')}}"><img src="{{asset("dash/img/icon01.svg")}}"></a></li>
+                <li class='sidebar-title'><a href="{{route('dashboard.admin.blockeddate.index')}}"><img src="{{asset("dash/img/icon01.svg")}}"></a></li>
                 <li class='sidebar-title'><a href="{{route('dashboard.admin.perfil')}}"><img src="{{asset("dash/img/icon03.svg")}}"></a></li>
                 <li class='sidebar-title'><a href="{{route('dashboard.admin.perfil')}}"><img src="{{asset("dash/img/perfil.png")}}"></a></li>
 

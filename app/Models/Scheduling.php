@@ -12,10 +12,10 @@ class Scheduling extends Model
     protected $data_opc = [
         'step01' => [ '#', 'Square', 'L Shap', 'Free Form' ],
         'step02' => [ '#', 'Sim', 'Não'],
-        'step03' => [ '#', 'Alicatado', 'Aresta', 'Majólica' ],
-        'step04' => [ '#', 'Azul', 'Verde', 'Cinza' ],
-        'step05' => [ '#', 'Cedro', 'Cerejeira', 'Cumaru' ],
-        'step06' => [ '#', 'Square', 'L Shap', 'Free' ],
+        'step03' => [ '#', 'Silver', 'Tahoe', 'Capri' ],
+        'step04' => [ '#', 'Blue', 'Blue-Gray', 'Blue Purple' ],
+        'step05' => [ '#', 'Light Blue', 'Blue', 'Charcoal' ],
+        'step06' => [ '#', 'Tan', 'Gray', 'Brown' ],
     ];
 
     protected $fillable = [
