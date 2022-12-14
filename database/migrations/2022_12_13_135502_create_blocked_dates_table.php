@@ -16,7 +16,6 @@ class CreateBlockedDatesTable extends Migration
         Schema::create('blocked_dates', function (Blueprint $table) {
             $table->id();
             $table->string('date');
-            $table->string('time');
             $table->timestamps();
         });
     }

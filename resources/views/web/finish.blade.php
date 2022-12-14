@@ -42,7 +42,6 @@
                         <input class="mb-3" placeholder="Data: {{date('d/m/Y', strtotime($scheduling->date))}}" type="" disabled>
                         <input placeholder="Horário: {{$scheduling->time}}" type="" disabled>
                     </form>
-
                     <button onclick="window.location.href = 'https://projetos.agencianoquarto.com.br/neway/'">Retornar para home <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
                 </div>
 
@@ -52,6 +51,7 @@
                     <p>É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando
                         analisa
                         estilo de a sua mancha gráfica. </p>
+                    <a style="color:#fff" href="{{$scheduling->image()}}" download="modelo_newway">Baixar Modelo</a>
                 </div>
             </div>
         </div>

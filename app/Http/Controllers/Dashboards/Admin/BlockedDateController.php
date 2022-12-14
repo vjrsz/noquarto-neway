@@ -32,7 +32,6 @@ class BlockedDateController extends Controller
     public function edit(BlockedDate $blockeddate, Request $request)
     {   
         $blockeddate->date = $request->date;
-        $blockeddate->time = $request->time;
         $blockeddate->save();
 
         return redirect()->back()->withSuccess('Editado com sucesso');

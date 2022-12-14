@@ -12,7 +12,6 @@
                             <tr>
                                 <th>ID :</th>
                                 <th>Data :</th>
-                                <th>Hora : </th>
                                 <th>Ação 1 : </th>
                                 <th>Ação 2 : </th>
                             </tr>
@@ -22,7 +21,6 @@
                                 <tr>
                                     <td class="text-bold-500">{{ $bd->id }}</td>
                                     <td>{{ date('d/m/Y', strtotime($bd->date)) }}</td>
-                                    <td>{{ $bd->time }}</td>
                                     <td>
                                         <a type="button"
                             data-href={{ route('dashboard.admin.blockeddate.edit', ['blockeddate' => $bd->id]) }}

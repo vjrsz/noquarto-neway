@@ -14,7 +14,6 @@
                     <h3>Editar Bloqueio Horário</h3>
 
                     <input type="date" placeholder="Data" name="date">
-                    <input type="time" placeholder="Horas" name="time">
                     <div class="text-center"><button type="submit" class="btn btn-primary">Confirmar
                             Bloqueio</button></div>
                 </form>
@@ -26,7 +25,6 @@
 <script>
     $('[data-bs-target="#edit"]').click(function() {
         $('input[type=date]').val($(this).data('date'));
-        $('input[type=time]').val($(this).data('time'));
         $('#editform').attr('action', $(this).data('href'));
         console.log( $(this).data('href') ) ;
     })

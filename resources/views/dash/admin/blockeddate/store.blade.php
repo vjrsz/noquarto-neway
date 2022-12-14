@@ -13,7 +13,6 @@
                     <h3>Bloquear Horário</h3>
                     <p>Bloqueie um horário</p>
                     <input type="date" placeholder="Data" name="date">
-                    <input type="time" placeholder="Horas" name="time">
                     <div class="text-center"><button type="submit" class="btn btn-primary">Confirmar
                             Bloqueio</button></div>
                 </form>

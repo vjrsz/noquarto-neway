@@ -11,7 +11,6 @@ class BlockedDate extends Model
 
     protected $fillable = [
         'date',
-        'time'
     ];
 
     

@@ -28,7 +28,11 @@ class Scheduling extends Model
         'time',
         'data',
     ];
+    public function image(){
+        $data = json_decode($this->data);
 
+        return asset('img/steps/06/'.$data->image);
+    }
     public function format(){
         $data = json_decode($this->data);
 

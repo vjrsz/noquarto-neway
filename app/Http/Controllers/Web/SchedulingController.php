@@ -34,13 +34,7 @@ class SchedulingController extends Controller
         $dates = BlockedDate::where('date', $date)->get();
 
         if( count($dates) ){
-            foreach($dates as $date){
-                $timeaux = date('H:i', strtotime( $date->time ) + 60*60);
-                if ( strtotime($time) >= strtotime($date->time) && strtotime($time) < strtotime($timeaux) ){
-                    $success = false;
-                    break;
-                } 
-            }
+            $success = false;
         }
 
         $dates = Scheduling::where('date', $date)->get();
