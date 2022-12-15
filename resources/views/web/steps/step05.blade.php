@@ -8,18 +8,18 @@
             <div>
                 <h3 class="mb-3">Escolha do Plaster:</h3>
                 <div class=" form-check">
-                    <input type="checkbox" class="form-check-input" name="type05" value="1" checked>
-                    <label class="form-check-label" for="type05">Plaster Azul Claro</label>
+                    <input style="display:none;" type="checkbox" class="form-check-input" id="type051" name="type05" value="1" checked>
+                    <label class="form-check-label" for="type051"><img src="{{asset('img/selects/az01.png')}}">Plaster Azul Claro</label>
                 </div>
 
                 <div class=" form-check">
-                    <input type="checkbox" class="form-check-input" name="type05" value="2">
-                    <label class="form-check-label" for="type05">Plaster Azul Escuro</label>
+                    <input style="display:none;" type="checkbox" class="form-check-input" id="type052" name="type05" value="2">
+                    <label class="form-check-label" for="type052"><img src="{{asset('img/selects/az02.png')}}">Plaster Azul Escuro</label>
                 </div>
 
                 <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" name="type05" value="3" >
-                    <label class="form-check-label" for="type05">Plaster Cyan</label>
+                    <input style="display:none;" type="checkbox" class="form-check-input" id="type053" name="type05" value="3" >
+                    <label class="form-check-label" for="type053"><img src="{{asset('img/selects/az03.png')}}">Plaster Cyan</label>
                 </div>
                 <div class="row">
                     <div class="col-lg-6"><button before-step

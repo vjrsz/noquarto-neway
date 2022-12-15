@@ -46,11 +46,6 @@
         plaster = arr[4] - 1 >= 0 ? '-' + values[4][arr[4] - 1] : '';
         deck = arr[5] - 1 >= 0 ? '-' + values[5][arr[5] - 1] : '';
 
-        /*forma = values[0][arr[0] - 1] ? values[0][arr[0] - 1] : '';
-        plaster = values[4][arr[4] - 1] ? '-' + values[4][arr[4] - 1] : '';
-        deck = values[5][arr[5] - 1] ? '-' + values[5][arr[5] - 1] : '';
-        border = values[3][arr[3] - 1] ? '-' + values[3][arr[3] - 1] : '';*/
-
         if ( forma ) source = forma + spa + border + azulejo + plaster + deck + '.jpg'
         else if (step_actual == 1) source = 'index.jpg'
 
@@ -59,7 +54,7 @@
     function backStep(){
         if (step_actual > 1) { 
             $('#step0' + step_actual).hide();
-
+            data["step0" + step_actual] = null
             step_actual -= 1
             step_id = "step0" + step_actual
             value = 0
